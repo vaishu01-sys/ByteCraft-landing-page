@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteCraft</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h2 {
+            color: #667eea;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* HERO */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: white;
+            background: url('bg.jpeg') no-repeat center/cover;
+            position: relative;
+        }
+
+        /* Overlay */
+        #hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #hero * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin-left: 50px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 10px rgba(0,255,255,0.6);
+        }
+
+        .hero-content p {
+            margin: 15px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00d4ff;
+            color: black;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* FEATURES */
+        .features {
+            background: linear-gradient(to right, #eef6ff, #f5f9ff);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            margin-bottom: 30px;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            width: 250px;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .card i {
+            font-size: 30px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 60px 20px;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            width: 250px;
+        }
+
+        .about-text {
+            max-width: 500px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            padding: 40px;
+            background: #f4f4f4;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            .hero-content {
+                margin-left: 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h2>ByteCraft 🚀</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Empowering Digital Innovation 🚀</h1>
+            <p>Create modern, scalable, and smart web experiences effortlessly.</p>
+            <a href="#" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2>✨ What We Offer</h2>
+        <div class="feature-container">
+
+            <div class="card">
+                <i class="fas fa-rocket"></i>
+                <h3>Fast Deployment</h3>
+                <p>Launch your product quickly with powerful tools.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-lock"></i>
+                <h3>Secure Platform</h3>
+                <p>Advanced security ensures your data stays protected.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-cogs"></i>
+                <h3>Customizable</h3>
+                <p>Flexible solutions tailored to your needs.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>We’re always here to help you anytime.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="about">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>ByteCraft helps startups and businesses build modern, efficient, and scalable digital solutions using the latest technologies.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@bytecraft.com</p>
+        <p>Phone: +91 9876XXXXXX</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 ByteCraft | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
